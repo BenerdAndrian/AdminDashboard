@@ -1,7 +1,7 @@
 :root{
-    --blue-color:#36b2e4;
-    --orange-color:#ee850d;
-    --grey-color:rgb(211, 211, 211);
+    --blue-color:#219bff;
+    --orange-color:#e0953e;
+    --grey-color:rgb(226, 226, 226);
 }
 
 html{
@@ -21,29 +21,37 @@ li{
     grid-template-columns:1fr 4fr;
     height:100%;
 }
+
 .sidebar{
     grid-columns:1/2;
     color:white;
     font-size:1rem;
     background-color:var(--blue-color);
     display:grid;
-    grid-template-rows:50px 1fr 1fr;
+    grid-template-rows:50px 300px 100px;
     font-weight:bold;
 }
 div.class1 ul,div.class2 ul{
 display:grid;
 row-gap:0.6rem;
 }
+.sidebarItems{
+   margin-top:2rem;
+}
  .sidebar h1{
     grid-row:1/2;
-    font-size:2rem;
+    font-size:1.6rem;
     font-weight:bold;
+    display:flex;
+    align-items: center;
+    margin-left:1rem;
  }
  div.class1 ul{
     grid-row:2/3;
     margin-bottom:2rem;
     grid-template-rows:repeat(6,1fr);
  }
+
  div.class2 ul{
     grid-row:3/4;
     grid-template-rows:repeat(3,25px);
@@ -54,13 +62,32 @@ row-gap:0.6rem;
  .container2{
     grid-column:2/3;
     display:grid;
-    grid-template-rows:100px 100vh;
+    grid-template-rows:140px 100vh;
+ }
+ .logo{
+   width:30px;
+   height:30px;
+ }
+ div.class1 ul li,div.class2 ul li{
+   display:flex;
+   align-items:center;
+   margin:0 0 0.8rem 1rem;
+ }
+ svg{
+   width:25px;
+   height:25px;
+   margin-right:0.75rem
+ }
+ .sidebarSVG{
+   fill:white;
+   padding:0;
  }
  .header{
     grid-row:1/2;
     background:white;
     display:grid;
     grid-template-rows:repeat(2,1fr);
+    padding-bottom:0.5rem;
  }
  .headLine1{
     grid-row:1/2;
@@ -74,17 +101,32 @@ row-gap:0.6rem;
  }
  .particle1,.particle2,.particle3,.particle4{
     grid-column:span 1;
+    display:flex;
+    align-items:center;
+ }
+ .particle1{
+   display:flex;
+   align-items:center;
+   margin-left:2rem;
  }
  .particle4{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(3,120px);
+    justify-content:center;
+    margin-left:8rem;
  }
- .particle4 li{
-    grid-column:span 1;
+ .particle3{
+   margin-left:2rem;
  }
+.particle2 span{
+   margin-left:1rem;
+}
+.particle2 svg{
+   margin-right:1rem;
+}
  .particle4 li button{
-    padding:0.6rem 1.6rem;
-    font-size:1.2rem;
+    padding:0.5rem 1.6rem;
+    font-size:1rem;
     background-color:var(--blue-color);
     color:white;
     border:none;
@@ -114,6 +156,7 @@ row-gap:0.6rem;
     border-radius:1rem;
     grid-column:span 1;
     grid-row:span 1;
+    border:1px solid;
     
  }
  .mainContent li p{
@@ -140,6 +183,8 @@ row-gap:0.6rem;
  .middleText{
     font-weight: bold;
     font-size:0.8rem;
+    display:block;
+    padding:0;
  }
 .smallText{
     font-size:0.6rem;
@@ -149,4 +194,43 @@ row-gap:0.6rem;
     font-size:1rem;
     font-weight:bold;
     margin:0.25rem;
+}
+.theInputTextBox{
+   background-color:lightgrey;
+   width:500px;
+   border:none;
+   padding:0.25rem;
+   border-radius:1rem;
+}
+.avatar{
+   width:35px;
+   height:35px;
+   border-radius:30px;
+}
+.bigAvatar{
+   width:50px;
+   height:50px;
+   border-radius:30px;
+}
+.name{
+   font-weight:bold;
+   margin-left:1rem;
+}
+.name.smallText{
+   color:black;
+}
+.item{
+   display:flex;
+   align-items: center;
+}
+
+.svgList{
+   display:flex;
+   justify-content:flex-end;
+   align-items: center;
+   margin-top:1.5rem;
+}
+.mainContent ul li{
+   border-left:7px solid var(--orange-color);
+
 }
